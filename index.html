@@ -4,317 +4,279 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Omar &amp; Yasmine — A Sunset Celebration on the Nile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ahmed &amp; Menna — A Love Story, 30.11.26</title>
   <meta name="description"
-    content="Join Omar & Yasmine on August 2, 2026 for a sunset wedding at Sofitel Cairo Nile El Gezirah." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    content="An invitation to celebrate Ahmed &amp; Menna — save the date: November 30, 2026." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;1,400;0,600&family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;1,400;0,600&family=Alex+Brush&display=swap" />
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&family=Caveat:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+  <div class="grain"></div>
 
   <!-- PRELOADER -->
-  <div id="preloader">
-    <video id="preloaderVideo" src="media/Preloader3.mp4" poster="media/Poster3.jpg" playsinline></video>
-    <div id="preloader-white-fade" aria-hidden="true"></div>
-
-    <div id="preloader-click-prompt">Click To Open</div>
+  <div class="preloader" id="preloader">
+    <!-- Poster: shows first, click to start video -->
+    <div class="pre-poster" id="prePoster">
+      <img src="assets/Poster.jpg" alt="Ahmed & Menna" onerror="this.src='assets/Poster.png'" />
+      <div class="pre-cta">Click to open</div>
+    </div>
+    <!-- Video: hidden until poster is clicked -->
+    <video id="preVideo-el" src="assets/Preloader.mp4" playsinline webkit-playsinline muted></video>
   </div>
 
-  <!-- HERO -->
-  <section class="hero">
-    <video id="heroVideo" src="media/hero.mp4" muted playsinline loop></video>
-    <div class="hero-overlay"></div>
+  <main>
 
-    <div id="heroContent" class="hero-content">
-      <div class="hero-stack">
-        <p class="hero-eyebrow reveal" style="--d:.3s">Together with their families</p>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
 
-        <div class="hero-divider hero-divider--heart reveal grow" style="--d:.45s" aria-hidden="true">
-          <span class="hero-divider__line"></span>
-          <span class="hero-divider__icon">♥</span>
-          <span class="hero-divider__line"></span>
+      <header class="topnav reveal" data-delay="1200">
+        <span class="mono">A &amp; M · 2026</span>
+      </header>
+
+      <div class="hero-grid">
+        <div class="hero-photo hero-photo-l reveal-photo" data-side="left">
+          <img src="assets/mirror.jpg" alt="us in the mirror" />
         </div>
 
-        <h1 class="hero-names reveal" style="--d:.65s">
-          <span class="hero-name">Omar</span>
-          <span class="hero-amp" aria-label="and">
-            <span class="hero-amp__sym">&amp;</span>
-          </span>
-          <span class="hero-name">Yasmine</span>
-        </h1>
-
-        <p class="hero-invite reveal" style="--d:.95s">Invite you to celebrate the beginning of their</p>
-        <p class="hero-forever reveal" style="--d:1.15s">
-          forever<span class="hero-forever__heart" aria-hidden="true">♥</span>
-        </p>
-
-        <div class="hero-divider hero-divider--ornate reveal grow" style="--d:1.35s" aria-hidden="true">
-          <span class="hero-divider__line"></span>
-          <span class="hero-divider__ornament">❦</span>
-          <span class="hero-divider__line"></span>
+        <div class="hero-copy">
+          <p class="script blush reveal" data-delay="1400">we&rsquo;re getting married</p>
+          <h1 class="display title">
+            <span class="word" data-text="Ahmed"></span>
+            <span class="amp">&amp;</span>
+            <span class="word" data-text="Menna"></span>
+          </h1>
+          <div class="hero-meta reveal" data-delay="2600">
+            <div class="rule"><span class="line"></span><span class="mono">30 . 11 . 2026</span><span
+                class="line"></span></div>
+            <a class="btn-ink" href="#date"><span>Save the Date</span><span class="arrow">→</span></a>
+          </div>
         </div>
 
-        <p class="hero-date reveal" style="--d:1.55s">
-          02 <span class="hero-date__sep">|</span> 08 <span class="hero-date__sep">|</span> 2026
-        </p>
-
-        <div class="hero-divider hero-divider--heart reveal grow" style="--d:1.75s" aria-hidden="true">
-          <span class="hero-divider__line"></span>
-          <span class="hero-divider__icon">♥</span>
-          <span class="hero-divider__line"></span>
+        <div class="hero-photo hero-photo-r reveal-photo" data-side="right">
+          <img src="assets/dinner.jpg" alt="us at dinner" />
         </div>
-
-        <p class="hero-tagline reveal" style="--d:1.95s">A new chapter begins</p>
-        <p class="hero-closing reveal" style="--d:2.15s">We can't wait to celebrate with you</p>
       </div>
 
-      <div class="scroll-cue reveal" style="--d:2.5s">
-        <span>Scroll down</span>
-        <div class="scroll-line"></div>
+      <div class="scroll-indicator mono">scroll ↓</div>
+    </section>
+
+    <!-- SAVE THE DATE -->
+    <section class="section date-section" id="date">
+      <div class="std-poster in-view">
+
+        <!-- Top Typography -->
+        <div class="std-heading">
+          <div class="std-save">SAVE</div>
+          <div class="std-the-date">
+            <span class="std-the">the</span>
+            <span class="std-date-word"> DATE!</span>
+          </div>
+        </div>
+
+        <!-- Couple Illustration -->
+        <div class="std-couple">
+          <img src="assets/couples.png" alt="Ahmed &amp; Menna illustration" />
+        </div>
+
+        <!-- Names & Date -->
+        <div class="std-footer">
+          <p class="std-names">Ahmed + Menna</p>
+          <p class="std-wdate">30 . 11 . 2026</p>
+        </div>
+
       </div>
+    </section>
+
+    <!-- VENUE -->
+    <section class="section venue" id="venue">
+      <div class="venue-bg" data-parallax>
+        <img src="assets/venue.jpg" alt="The venue under a full moon" />
+        <div class="venue-overlay"></div>
+      </div>
+      <div class="container venue-content">
+        <h2 class="display venue-title in-view">Under one<br /><em>very full</em> moon.</h2>
+        <div class="venue-grid in-view">
+          <div>
+            <p class="mono tiny dim">Venue</p>
+            <p class="display med">Elite Hall</p>
+          </div>
+          <div>
+            <p class="mono tiny dim">When</p>
+            <p class="display med">30 Nov 2026 · 8pm</p>
+          </div>
+          <div>
+            <p class="mono tiny dim">Dress</p>
+            <p class="display med">Soft pastels</p>
+          </div>
+        </div>
+        <a class="btn-glass in-view" href="https://maps.google.com" target="_blank" rel="noreferrer"><span>Open in
+            Maps</span><span>↗</span></a>
+      </div>
+    </section>
+
+    <!-- PROGRAM -->
+    <section class="section program" id="program">
+      <div class="orb orb-peach"></div>
+      <div class="container">
+        <div class="center">
+          <p class="script blush in-view">How the day unfolds</p>
+          <h2 class="display xl in-view">The program</h2>
+        </div>
+        <div class="timeline" id="timeline">
+          <div class="tl-item in-view" style="transition-delay: 0.1s">
+            <div class="tl-time">7:00 PM</div>
+            <div class="tl-content">
+              <h3>The Grand Entrance</h3>
+              <p>The celebration begins with our special entrance.</p>
+            </div>
+          </div>
+          <div class="tl-item in-view" style="transition-delay: 0.2s">
+            <div class="tl-time">8:00 PM</div>
+            <div class="tl-content">
+              <h3>Welcome & Arrivals</h3>
+              <p>Sip something cold, find your seat.</p>
+            </div>
+          </div>
+          <div class="tl-item in-view" style="transition-delay: 0.3s">
+            <div class="tl-time">8:30 PM</div>
+            <div class="tl-content">
+              <h3>The Ceremony</h3>
+              <p>Where the forever part happens.</p>
+            </div>
+          </div>
+          <div class="tl-item in-view" style="transition-delay: 0.4s">
+            <div class="tl-time">12:00 AM</div>
+            <div class="tl-content">
+              <h3>The Celebration Ends</h3>
+              <p>Thank you for being part of our special night.</p>
+            </div>
+          </div>
+        </div>
+        <p class="center script blush big in-view">Stay as late as your heart wants ✿</p>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section gallery" id="gallery">
+      <div class="orb orb-dark"></div>
+      <div class="container">
+        <div class="gallery-head in-view">
+          <h2 class="display xl">Moments, Framed.</h2>
+          <p class="dim-cream">A love letter, in fragments. Tap, hover, linger.</p>
+        </div>
+        <div class="gallery-grid">
+          <div class="g-item g-big"><img src="assets/mirror.jpg" alt="us" /><span class="g-cap script">us</span></div>
+          <div class="g-item"><img src="assets/dinner.jpg" alt="dinner" /><span class="g-cap script">dinner
+              laughs</span></div>
+          <div class="g-item"><img src="assets/cinema.jpg" alt="cinema" /><span class="g-cap script">movie night</span>
+          </div>
+          <div class="g-item g-wide"><img src="assets/handprints.jpg" alt="handprints" /><span
+              class="g-cap script">painted palms</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="section countdown" id="countdown">
+      <div class="bg-warm soft"></div>
+      <div class="container narrow center">
+        <h2 class="display xl in-view">Counting the days</h2>
+        <div class="count-grid" id="countGrid"></div>
+        <p class="script big blush in-view">Until forever begins ✿</p>
+      </div>
+    </section>
+    <!-- DIVIDER -->
+    <div class="section-divider">
+      <span class="line"></span>
     </div>
-  </section>
 
-  <!-- COUNTDOWN -->
-  <section class="pad-section countdown-section" style="padding-bottom: 1.5rem;">
-    <div class="container container-countdown">
-      <div class="section-head inview">
-        <p class="eyebrow">Counting the moments</p>
-        <div class="divider mx-auto"></div>
-      </div>
-      <div class="countdown-block">
-        <div id="countdown" class="countdown" aria-live="polite">
-          <div class="cd-unit">
-            <div class="cd-num" data-k="days">00</div>
-            <div class="cd-label">Days</div>
-          </div>
-          <span class="cd-sep" aria-hidden="true">·</span>
-          <div class="cd-unit">
-            <div class="cd-num" data-k="hours">00</div>
-            <div class="cd-label">Hours</div>
-          </div>
-          <span class="cd-sep" aria-hidden="true">·</span>
-          <div class="cd-unit">
-            <div class="cd-num" data-k="minutes">00</div>
-            <div class="cd-label">Minutes</div>
+    <!-- WAITING FOR YOU -->
+    <section class="section waiting" id="waiting">
+      <div class="container narrow center">
+        <div class="waiting-box">
+          <h2 class="display med in-view">We're so excited to see you!</h2>
+          <div class="waiting-text in-view">
+            <p>Our next chapter starts with all of you beside us.
+              See you on our special day.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="section-divider-container inview">
-    <img src="assets/ChatGPT Image May 23, 2026, 07_58_54 PM.png" alt="Divider" class="section-divider-image" />
-  </div>
+   <!-- FOOTER -->
+<footer class="footer">
+  <div class="container center">
+    <p class="display big">Ahmed <em>&amp;</em> Menna</p>
+    <p class="mono tiny">30 . 11 . 2026</p>
 
-  <!-- WELCOME -->
-  <section class="pad-section" style="position: relative;">
-    <div class="container">
-      <div class="section-head inview">
-        <p class="eyebrow">A note to you</p>
-        <h2 class="h2">Welcome, dear guest</h2>
-        <div class="divider mx-auto"></div>
-      </div>
-      <p class="welcome serif italic inview">
-        With hearts full of gratitude, we invite you to share in our love story —
-        a golden evening by the Nile, where two families become one beneath the Cairo sky.
+    <div class="footer-branding">
+      <p class="mono tiny">
+        Created by
+        <a href="https://www.instagram.com/_eng_a7med_/" target="_blank">
+          ENG_Ahmed Abo Rashed
+        </a>
       </p>
-    </div>
-  </section>
 
-  <div class="section-divider-container inview">
-    <img src="assets/ChatGPT Image May 23, 2026, 07_58_54 PM.png" alt="Divider" class="section-divider-image" />
-  </div>
+      <div class="footer-socials">
 
-  <!-- SAVE THE DATE (Replaced by Image) -->
-  <section class="inview" style="width: 100%; padding: 0;">
-    <img src="assets/ChatGPT Image May 22, 2026, 06_31_35 PM.png" alt="Save the Date"
-      style="width: 100%; max-width: 100vw; height: auto; display: block; mix-blend-mode: multiply;" />
-  </section>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/_eng_a7med_/"
+           target="_blank"
+           rel="noreferrer"
+           aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
 
-  <div class="section-divider-container inview">
-    <img src="assets/ChatGPT Image May 23, 2026, 07_58_54 PM.png" alt="Divider" class="section-divider-image" />
-  </div>
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@ar_sysworks"
+           target="_blank"
+           rel="noreferrer"
+           aria-label="TikTok">
+          <svg width="16" height="16" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5v3a3 3 0 0 1-3-3"></path>
+          </svg>
+        </a>
 
-  <!-- ORDER OF THE DAY -->
-  <section class="pad-section schedule-section" style="position: relative;">
-    <img src="assets/Icons/ChatGPT Image May 23, 2026, 07_43_20 PM.png" class="icon-deco inview"
-      style="bottom: 15%; right: 8%; transform: rotate(20deg);" alt="" aria-hidden="true" />
-    <div class="container">
-      <div class="section-head inview">
-        <p class="eyebrow">Order of the day</p>
-        <h2 class="h2">The Evening's Journey</h2>
-        <div class="divider mx-auto"></div>
-      </div>
-      <div class="schedule">
-        <article class="schedule-card inview">
-          <time class="schedule-time" datetime="2026-08-02T16:00">6:00 PM</time>
-          <div class="schedule-card__divider" aria-hidden="true"></div>
-          <h3 class="schedule-title">Welcome Drinks &amp; Sunset Views</h3>
-          <p class="schedule-desc">Greet the golden hour with champagne on the Nile terrace.</p>
-        </article>
-        <div class="schedule-ornament inview" aria-hidden="true">♥</div>
-        <article class="schedule-card inview">
-          <time class="schedule-time" datetime="2026-08-02T19:00">9:00 PM</time>
-          <div class="schedule-card__divider" aria-hidden="true"></div>
-          <h3 class="schedule-title">Premium Dinner &amp; Live Music</h3>
-          <p class="schedule-desc">A seated dinner curated by Sofitel, accompanied by live oud and strings.</p>
-        </article>
-        <div class="schedule-ornament inview" aria-hidden="true">♥</div>
-        <article class="schedule-card inview">
-          <time class="schedule-time" datetime="2026-08-02T23:00">1:00 AM</time>
-          <div class="schedule-card__divider" aria-hidden="true"></div>
-          <h3 class="schedule-title">Dance Floor &amp; Celebrations</h3>
-          <p class="schedule-desc">DJ set, sparklers, and dancing under the stars until late.</p>
-        </article>
+        <!-- WhatsApp -->
+        <a href="https://wa.me/201020084862"
+           target="_blank"
+           rel="noreferrer"
+           aria-label="WhatsApp">
+          <svg width="16" height="16" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 11.5a8.38 8.38 0 0 1-1.9 5.4
+                     8.5 8.5 0 0 1-7.6 2.7L3 21l1.4-8.3
+                     a8.5 8.5 0 1 1 16.6-1.2z"></path>
+            <path d="M8 10s1.5 3 4 4 4-1 4-1"></path>
+          </svg>
+        </a>
+
       </div>
     </div>
-  </section>
-
-  <div class="section-divider-container inview">
-    <img src="assets/ChatGPT Image May 23, 2026, 07_58_54 PM.png" alt="Divider" class="section-divider-image" />
   </div>
+</footer>
 
-  <!-- LOCATION -->
-  <section class="pad-section venue-section" style="position: relative;">
-    <div class="container">
-      <div class="venue-redesign inview">
-        <div class="venue-text">
-          <div class="section-head" style="text-align: left; margin-bottom: 1.5rem;">
-            <p class="eyebrow">Where it all happens</p>
-            <h2 class="h2">The Venue</h2>
-            <div class="divider" style="margin: 1.15rem 0 0;"></div>
-          </div>
-          <h3 class="display ink" style="font-size: clamp(1.4rem, 3vw, 1.8rem); margin-bottom: 0.25rem;">Sofitel Cairo
-            Nile El Gezirah</h3>
-          <p class="serif italic terracotta" style="margin-bottom: 1.5rem; letter-spacing: 0.05em;">Cairo, Egypt</p>
-          <p class="muted serif" style="margin-bottom: 2.5rem; line-height: 1.8;">
-            Join us at the elegant Sofitel Cairo Nile El Gezirah, perfectly situated on the southern tip of Gezirah
-            Island.
-            We invite you to enjoy sweeping views of the Nile river and the golden sunset as we celebrate the beginning
-            of our forever.
-          </p>
-          <div class="cta-row" style="margin-top: 0;">
-            <a class="btn-primary" target="_blank" rel="noreferrer"
-              href="https://maps.google.com/?q=Sofitel+Cairo+Nile+El+Gezirah">View on Google Maps</a>
-          </div>
-        </div>
+  </main>
 
-        <div class="venue-image-container">
-          <div class="venue-arch-frame">
-            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80"
-              alt="Sofitel Cairo Nile El Gezirah at sunset" />
-          </div>
-          <div class="venue-image-deco" aria-hidden="true">✦</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="section-divider-container inview">
-    <img src="assets/ChatGPT Image May 23, 2026, 07_58_54 PM.png" alt="Divider" class="section-divider-image" />
-  </div>
-
-  <!-- GUIDELINES -->
-  <section class="pad-section" style="position: relative;">
-    <div class="container">
-      <div class="section-head inview">
-        <p class="eyebrow">A few kind notes</p>
-        <h2 class="h2">Guidelines</h2>
-        <div class="divider mx-auto"></div>
-      </div>
-      <div class="grid-3">
-        <div class="card inview">
-          <h3 class="display ink">Dress Code</h3>
-          <div class="divider gold sm"></div>
-          <p class="muted serif">A formal evening calls for elegant gowns and tailored suits in warm, sunset tones.</p>
-          <p class="serif italic terracotta mt">Kindly avoid wearing white — it is reserved for the bride.</p>
-        </div>
-        <div class="card inview">
-          <h3 class="display ink">Adults Only</h3>
-          <div class="divider gold sm"></div>
-          <p class="muted serif">We adore your little ones, but this celebration is intended as an adults-only evening
-            so all may unwind and revel late into the night.</p>
-        </div>
-        <div class="card inview">
-          <h3 class="display ink">Arrival</h3>
-          <div class="divider gold sm"></div>
-          <p class="muted serif">Doors open at 3:30 PM. Valet parking available at the Sofitel main entrance.</p>
-          <p class="tiny muted tracking mt">BE SEATED BY 3:50 PM</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <img src="assets/monogram.jpg" alt="Omar and Yasmine monogram" class="footer-monogram" />
-    <div class="footer-names" aria-label="Omar and Yasmine">
-      <span class="footer-name">Omar</span>
-      <span class="footer-amp" aria-hidden="true">
-        <span class="footer-amp__sym">&amp;</span>
-      </span>
-      <span class="footer-name">Yasmine</span>
-    </div>
-    <p class="footer-date">2 · AUGUST · 2026</p>
-    <p class="gold-row">✦ ♥ ✦</p>
-
-    <div class="creator-credit mt">
-  <p class="tiny muted">
-    Created by <span class="creator-name">ENG_Ahmed Abo Rashed</span>
-  </p>
-
-  <div class="social-icons">
-
-    <!-- Instagram -->
-    <a href="https://www.instagram.com/_eng_a7med_/" target="_blank" rel="noreferrer" aria-label="Instagram">
-      <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"
-        stroke-linecap="round" stroke-linejoin="round">
-        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-      </svg>
-    </a>
-
-    <!-- TikTok -->
-    <a href="https://www.tiktok.com/@ar_sysworks" target="_blank" rel="noreferrer" aria-label="TikTok">
-      <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"
-        stroke-linecap="round" stroke-linejoin="round">
-        <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5v3a3 3 0 0 1-3-3"></path>
-      </svg>
-    </a>
-
-    <!-- WhatsApp -->
-    <a href="https://wa.me/201020084862" target="_blank" rel="noreferrer" aria-label="WhatsApp">
-      <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"
-        stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 11.5a8.38 8.38 0 0 1-1.9 5.4
-                 8.5 8.5 0 0 1-7.6 2.7L3 21l1.4-8.3
-                 a8.5 8.5 0 1 1 16.6-1.2z"></path>
-        <path d="M8 10s1.5 3 4 4 4-1 4-1"></path>
-      </svg>
-    </a>
-
-  </div>
-</div>
-
-    </div>
-  </footer>
-
-  <!-- Audio & Controls -->
-  <audio id="bgMusic" src="assets/bg-music.mp3" loop></audio>
-  <button id="musicToggle" class="music-toggle" aria-label="Toggle Music">
-    <svg id="musicIcon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="1.5" fill="none"
-      stroke-linecap="round" stroke-linejoin="round">
-      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-      <path id="musicWave1" d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-      <path id="musicWave2" d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
-    </svg>
+  <!-- MUSIC -->
+  <button class="music" id="music" aria-label="Toggle music">
+    <span class="bars"><i></i><i></i><i></i><i></i></span>
   </button>
 
   <script src="script.js"></script>
