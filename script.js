@@ -7,37 +7,26 @@ const songPath = 'assets/Alex Warren - Ordinary (Wedding Version) [Official Musi
 const audio = new Audio(songPath);
 audio.loop = true;
 let musicStarted = false;
-let preloaderDismissed = false;
 
 function dismissPreloader() {
-  if (preloaderDismissed) return;
-  preloaderDismissed = true;
-
   preloader.classList.add('done');
-
   document.querySelectorAll('.reveal').forEach(el => {
     const d = parseInt(el.dataset.delay || '0', 10);
     setTimeout(() => el.classList.add('in'), d);
   });
-
-  document.querySelectorAll('.reveal-photo').forEach(el => {
-    el.classList.add('in');
-  });
+  document.querySelectorAll('.reveal-photo').forEach(el => el.classList.add('in'));
 }
 
 // Preload video silently in background
 video.load();
 
-// Click poster → hide it, show & play video
+// Click poster â†’ hide it, show & play video
 prePoster.addEventListener('click', () => {
   prePoster.classList.add('hidden');
   video.classList.add('active');
   video.muted = true;
-
-  video.play().catch(() => {
-    dismissPreloader();
-  });
-
+  video.play().catch(() => {});
+  
   // Start background music
   if (!musicStarted) {
     audio.play().catch(err => console.log("Audio play failed:", err));
@@ -45,39 +34,14 @@ prePoster.addEventListener('click', () => {
     musicStarted = true;
   }
 
-  // Force close after 7 seconds
-  setTimeout(() => {
+    setTimeout(() => {
     dismissPreloader();
   }, 7000);
 });
 
-// Video ends → dismiss
+// Video ends â†’ dismiss
 video.addEventListener('ended', dismissPreloader);
-
-// Error fallback
-video.addEventListener('error', () => {
-  setTimeout(dismissPreloader, 500);
-});
-
-// Fallback لو ended مشتغلش
-video.addEventListener('timeupdate', () => {
-  if (
-    video.duration &&
-    video.currentTime >= video.duration - 0.15
-  ) {
-    dismissPreloader();
-  }
-});
-
-// Fallback إضافي
-video.addEventListener('pause', () => {
-  if (
-    video.duration &&
-    video.currentTime >= video.duration - 0.15
-  ) {
-    dismissPreloader();
-  }
-});
+video.addEventListener('error', () => setTimeout(dismissPreloader, 500));
 
 // Split text into chars with stagger
 document.querySelectorAll('.title .word').forEach((word, wi) => {
